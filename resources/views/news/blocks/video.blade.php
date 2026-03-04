@@ -9,7 +9,7 @@
 
     <!-- Main Video & Details -->
     <div class="col-md-12 mb-4">
-        @if(!empty($home_videos))
+        @if(!empty($home_videos[0]))
           <!-- Main Video -->
           <div class="ratio ratio-16x9 shadow rounded">
             <iframe 
@@ -25,7 +25,7 @@
     <div class="col-md-5 mt-4 mt-sm-0">
           <!-- Video Title -->
           <div class="mt-3">
-            
+            @if(!empty($home_videos[0]))
             <h4 class="fw-bold" id="mainVideoTitle">
               <a href="javascript:void(0);" 
               class="mt-4 video-thumb text-dark text-decoration-none"
@@ -33,13 +33,14 @@
               data-title="{{ $home_videos[0]->name }}">{{ $home_videos[0]->name }}
             </a></h4>
             <span>{{ $home_videos[0]->summary }}</span>
+            @endif
           </div>
     </div>
 
     <!-- Related Videos (sidebar) -->
     <div class="col-md-7 mt-4 mt-sm-0">
       <div class="row mb-3">
-        @if(!empty($home_videos))
+        @if(!empty($home_videos[1]))
         @foreach(array_slice($home_videos, 1, 4) as $video)
           <div class="col-md-3">
             <a href="javascript:void(0);" 
