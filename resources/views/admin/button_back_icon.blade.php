@@ -1,0 +1,1 @@
+<button class="border px-2 py-1 bg-gray-200 rounded mr-2" onclick="history.back()"> &larr; </button>

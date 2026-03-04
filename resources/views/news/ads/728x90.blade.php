@@ -1,0 +1,1 @@
+@include($websettings['cms_layout'].'.ads.frame',['width'=>$width,'height'=>$height,'position'=>$position,'text'=>$text])

@@ -1,0 +1,1 @@
+<input value="0" type="checkbox" name="in_listed">
