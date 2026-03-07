@@ -421,7 +421,7 @@ hr {
 }
 .fs-20{font-size:20px}
 #openSearch{
-    margin-top: 10px;
+    margin-top: 20px;
     display: inline-block;
 }
 .border-btn {
@@ -2263,7 +2263,7 @@ hr {
   padding: 20px 20px;
 }
 .header-area .slicknav_btn {
-  top: -36px;
+  top: -55px;
   right: 17px;
 }
 .slicknav_menu .slicknav_nav a:hover {

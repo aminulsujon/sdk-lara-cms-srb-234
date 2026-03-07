@@ -138,18 +138,7 @@ function enToBnDate($datetime){
                     <!-- Right content -->
                     <div class="col-md-4">
                         {{-- @if(!empty($websettings['cms_ads_status'])) --}}
-                            <div class="mb-4 border p-2 bg-gray-100">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3157939455051527"
-                                    crossorigin="anonymous"></script>
-                                <!-- cx-300x250-fixed -->
-                                <ins class="adsbygoogle"
-                                    style="display:inline-block;width:300px;height:250px"
-                                    data-ad-client="ca-pub-3157939455051527"
-                                    data-ad-slot="7678667557"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                            </div> 
+                            
                         {{-- @endif --}}
                         
                         {{-- @if(!empty($content->tags)) --}}
@@ -178,7 +167,7 @@ function enToBnDate($datetime){
                     </div>
                 </div>
                 
-                @include($websettings['cms_layout'].'.ads.middle')
+                {{-- @include($websettings['cms_layout'].'.ads.middle') --}}
 
             </div>
         </div>

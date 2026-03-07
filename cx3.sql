@@ -760,46 +760,9 @@ INSERT INTO `sitemodules` (`id`, `name`, `description`, `status`, `position`) VA
 -- Table structure for table `siteoptions`
 --
 
-CREATE TABLE `siteoptions` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `okey` varchar(32) NOT NULL,
-  `ovalue` varchar(512) DEFAULT NULL,
-  `created_by` from users table,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_by` from users table,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 --
 -- Dumping data for table `siteoptions`
 --
-
-INSERT INTO `siteoptions` (`id`, `okey`, `ovalue`, `created_at`, `updated_at`) VALUES
-(1, 'cms_layout', 'news', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(2, 'cms_url', 'http://127.0.0.1:8000/', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(3, 'cms_assets', 'http://127.0.0.1:8000/', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(4, 'cms_author', 'Dainik Coxsbazar', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(5, 'cms_sitename', 'Dainik Coxsbazar', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(6, 'cms_news_seo', 'basic', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(7, 'cms_ads_status', '0', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(8, 'cms_news_ticker_status', '0', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(9, 'cms_web_copyright', 'স্বত্ব © ১৯৯০-২০২৫ SOROB TV | প্রতিষ্ঠাতা সম্পাদক: মরহুম মোহাম্মদ নুরুল ইসলাম', '2025-02-04 06:54:47', '2025-10-11 22:03:10'),
-(10, 'cms_developer_credit', '<a href=\"#\">Developed by CBB</a>', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(11, 'cms_facebook', 'https://www.facebook.com/dainikcox/', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(12, 'cms_twitter', 'https://twitter.com/dainikcoxsbazar', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(13, 'cms_youtube', 'https://www.youtube.com/channel/UCIhC_qsuhcTGFvmu1GIs-_Q?sub_confirmation=1', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(14, 'cms_home_events', '0', '2025-10-06 02:21:51', '2025-10-06 02:21:51'),
-(15, 'cms_headercode', '<!-- header code -->', '2025-10-07 00:08:48', '2025-10-07 00:08:48'),
-(16, 'cms_facebook_pixel', '<!-- facebook pixel code -->', '2025-10-07 00:08:48', '2025-10-07 00:08:48'),
-(17, 'cms_script_body', '<!-- body code -->', '2025-10-07 00:08:48', '2025-10-07 00:08:48'),
-(18, 'cms_google_code', '<!-- google code -->', '2025-10-07 00:08:48', '2025-10-07 00:08:48'),
-(19, 'cms_footer_code', '<!-- footer code -->', '2025-10-07 00:08:48', '2025-10-07 00:08:48'),
-(20, 'cms_header1', '1', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(21, 'cms_header2', '0', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(22, 'cms_header3', '1', '2025-02-04 06:54:47', '2025-02-04 06:54:47'),
-(23, 'cms_no_image', 'no-image.png', '2025-02-04 06:54:47', '2025-02-04 06:54:47');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `sitesettings`
@@ -1137,12 +1100,6 @@ ALTER TABLE `sessions`
 ALTER TABLE `sitemodules`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `siteoptions`
---
-ALTER TABLE `siteoptions`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `siteoptions_okey_unique` (`okey`);
 
 --
 -- Indexes for table `sitesettings`
@@ -1222,11 +1179,6 @@ ALTER TABLE `pagesettings`
 ALTER TABLE `sitemodules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT for table `siteoptions`
---
-ALTER TABLE `siteoptions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `sitesettings`

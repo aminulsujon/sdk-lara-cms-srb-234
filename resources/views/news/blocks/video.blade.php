@@ -40,26 +40,7 @@
     <!-- Related Videos (sidebar) -->
     <div class="col-md-7 mt-4 mt-sm-0">
       <div class="row mb-3">
-        @if(!empty($home_videos[1]))
-        @foreach(array_slice($home_videos, 1, 4) as $video)
-          <div class="col-md-3">
-            <a href="javascript:void(0);" 
-              class="mb-4 video-thumb d-block"
-              data-video="{{ $video->youtubevideo }}"
-              data-title="{{ $video->name }}">
-              <img src="https://img.youtube.com/vi/{{ $video->youtubevideo }}/mqdefault.jpg" 
-                  class="rounded shadow-sm me-3" 
-                  alt="{{ $video->name }}" 
-                  style="width: 150px; height: auto;">
-            </a>
-            <a href="javascript:void(0);" 
-              class="mt-4 video-thumb text-dark text-decoration-none"
-              data-video="{{ $video->youtubevideo }}"
-              data-title="{{ $video->name }}">{{ $video->name }}
-            </a>
-          </div>
-        @endforeach
-        @endif
+        
       </div>
     </div>
     
