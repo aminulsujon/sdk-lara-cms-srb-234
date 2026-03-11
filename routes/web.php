@@ -18,6 +18,7 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\AreaController;
+use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 
