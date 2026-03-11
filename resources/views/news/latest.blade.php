@@ -38,11 +38,12 @@ function enToBnDate($datetime){
         <div class="section-tittle mb-30">
             <h3>সর্বশেষ সংবাদ</h3>
         </div>
+        <div class="row">
         @foreach($contents as $content)
             @if($loop->iteration % 7 === 0)
                 @include($websettings['cms_layout'].'.ads.middle')
             @endif
-            <div class="border mt-4">
+            <div class="col-12col-md-6 border-b mt-4">
                 <div class="row">
                     <div class="col-4 col-md-2">
                         @foreach ($content['upload'] as $item)
@@ -64,6 +65,7 @@ function enToBnDate($datetime){
                 </div>
             </div>
         @endforeach
+        </div>
     </div>
     <!--Recent Articles End -->
 
