@@ -29,6 +29,9 @@
                             @include('news.blocks.newsList',['content'=>$content])
                         @endforeach
                     </div>
+                    <div class="col-lg-2">
+                        <img class="img-fluid" src="images/ramadan-2026.png" alt="Ramadan Calander 2026">
+                    </div>
                 </div>
 
                 {{-- <div class="row"> --}}
