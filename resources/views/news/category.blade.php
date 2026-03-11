@@ -48,7 +48,7 @@ function enToBnDate($datetime){
                             <div class="row">
                             {{--  --}}
                             @foreach($tag->contents->take(6)->where('status',1) as $content)
-                                <div class="col-6 col-md-4">
+                                <div class="{{ $loop->first ? 'col-12 col-md-8' : 'col-6 col-md-4' }}">
                                     <div class="single-bottom mb-35">
                                         <div class="trend-bottom-img mb-30">
                                             @foreach ($content['upload'] as $item)
