@@ -45,7 +45,7 @@ function enToBnDate($datetime){
             @endif
             <div class="col-12 col-md-6 border-b mt-4">
                 <div class="row">
-                    <div class="col-4 col-md-2">
+                    <div class="col-4 col-md-4">
                         @foreach ($content['upload'] as $item)
                             <a href="{{ $content['slug'] }}">
                                 <img class="img-fluid" src="{{ asset( 'images/uploads/thumb/'.$item['file']) }}" alt="{{ $item['name'] }}">  
@@ -53,8 +53,8 @@ function enToBnDate($datetime){
                             @break
                         @endforeach
                     </div>
-                    <div class="col-8 col-md-10">
-                        <h4 class="pt-0 pt-md-3"><a href="{{ $content->slug }}">{{ $content->name }}</a></h4>
+                    <div class="col-8 col-md-8">
+                        <h4 class=""><a href="{{ $content->slug }}">{{ $content->name }}</a></h4>
                         <div class="d-none d-md-block">
                             <svg fill="#ddd" width="20px" height="20px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <title>time</title>
