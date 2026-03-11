@@ -43,7 +43,7 @@ function enToBnDate($datetime){
             @if($loop->iteration % 7 === 0)
                 @include($websettings['cms_layout'].'.ads.middle')
             @endif
-            <div class="col-12col-md-6 border-b mt-4">
+            <div class="col-12 col-md-6 border-b mt-4">
                 <div class="row">
                     <div class="col-4 col-md-2">
                         @foreach ($content['upload'] as $item)
