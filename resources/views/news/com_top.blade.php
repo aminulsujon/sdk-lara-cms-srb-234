@@ -4,7 +4,7 @@
     <div class="container">
         <div class="trending-main">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         <!-- Trending Top 1-->
                         <div class="trending-top">
                             <div class="trend-top-img">
@@ -25,7 +25,7 @@
 
                     <!-- Right content : Top 5 -->
                     <div class="col-lg-4 rolled">
-                        @foreach($tops->Contents->skip(1)->take(5) as $content)
+                        @foreach($tops->Contents->skip(1)->take(4) as $content)
                             @include('news.blocks.newsList',['content'=>$content])
                         @endforeach
                     </div>
