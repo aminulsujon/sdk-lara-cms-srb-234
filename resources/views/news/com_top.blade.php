@@ -15,7 +15,7 @@
                                         </a>
                                         @break
                                     @endforeach
-                                    <div class="trend-top-cap rounded-bottom">
+                                    <div class="mt-2 rounded-bottom">
                                         <h2><a href="{{ $tops->Contents[0]['slug'] }}">{{ $tops->Contents[0]['name'] }}</a></h2>
                                     </div>
                                 @endif
@@ -30,29 +30,48 @@
                         @endforeach
                     </div>
                     <div class="col-lg-3">
-                        <div id="ramadan-widget" style="max-width:400px;padding:15px;border:1px solid #ddd;border-radius:10px;font-family:sans-serif">
-                            <h3 style="text-align:center">ঢাকা সেহরি ও ইফতার সময়</h3>
-                            <p id="date"></p>
-                            <p><strong>সেহরি শেষ:</strong> <span id="sehri"></span></p>
-                            <p><strong>ইফতার:</strong> <span id="iftar"></span></p>
-                            </div>
 
-                            <script>
-                            async function loadRamadanTime(){
-                            const res = await fetch("https://api.aladhan.com/v1/timingsByCity?city=Dhaka&country=Bangladesh&method=1");
-                            const data = await res.json();
+                        <div class="ramadan-border">
 
-                            const sehri = data.data.timings.Fajr;
-                            const iftar = data.data.timings.Maghrib;
-                            const date = data.data.date.readable;
+                        <div class="ramadan-card">
 
-                            document.getElementById("sehri").innerText = sehri;
-                            document.getElementById("iftar").innerText = iftar;
-                            document.getElementById("date").innerText = "তারিখ: " + date;
-                            }
+                        <div class="ramadan-title">
+                        🌙 ঢাকা সেহরি ও ইফতার সময়
+                        </div>
 
-                            loadRamadanTime();
-                            </script>
+                        <p id="date"></p>
+
+                        <div class="time-box">
+                        সেহরি শেষ: <strong id="sehri">Loading...</strong>
+                        </div>
+
+                        <div class="time-box">
+                        ইফতার: <strong id="iftar">Loading...</strong>
+                        </div>
+
+                        </div>
+
+                        </div>
+
+                        <script>
+
+                        async function loadRamadanTime(){
+
+                        const response = await fetch(
+                        "https://api.aladhan.com/v1/timingsByCity?city=Dhaka&country=Bangladesh&method=1"
+                        );
+
+                        const data = await response.json();
+
+                        document.getElementById("sehri").innerText = data.data.timings.Fajr;
+                        document.getElementById("iftar").innerText = data.data.timings.Maghrib;
+                        document.getElementById("date").innerText = "তারিখ: " + data.data.date.readable;
+
+                        }
+
+                        loadRamadanTime();
+
+                        </script>
                     </div>
                 </div>
 
@@ -60,7 +79,7 @@
                 <!-- Trending Bottom 4 -->
                 <div class="trending-bottom border-top pt-4">
                     <div class="row">
-                        @foreach($tops->Contents->skip(6)->take(4) as $content)
+                        @foreach($tops->Contents->skip(5)->take(4) as $content)
                             <div class="col-6 col-md-3  @if(!$loop->last) border-right @endif">
                                 <div class="single-bottom">
                                     <div class="mb-4">
@@ -85,7 +104,7 @@
 
                 <div class="trending-bottom border-top mt-3 pt-3">
                     <div class="row">
-                        @foreach($tops->Contents->skip(10)->take(4) as $content)                      
+                        @foreach($tops->Contents->skip(9)->take(4) as $content)                      
                             <div class="col-6 col-md-3  @if(!$loop->last) border-right @endif">
                                 <div class="single-bottom mb-4">
                                     <div class="trend-bottom-cap">

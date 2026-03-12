@@ -2020,6 +2020,10 @@ hr {
 .theme-color {
   color: #ee1822;
 }
+
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-area {
     box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
@@ -5943,3 +5947,32 @@ footer .dev-credit a {
 .link-img img{width:120px;margin-left:10px;border-radius:5px}
 .rolled .link-img{border-bottom: 1px solid #ddd}
 .rolled .link-img:last-child{border:none}
+
+.ramadan-border{
+padding:3px;
+background: linear-gradient(45deg,#198754,#0dcaf0,#ffc107);
+border-radius:15px;
+max-width:350px;
+margin:auto;
+margin-top:50px;
+}
+
+.ramadan-card{
+background:white;
+border-radius:12px;
+padding:20px;
+text-align:center;
+}
+
+.ramadan-title{
+font-size:20px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.time-box{
+background:#f8f9fa;
+padding:10px;
+border-radius:8px;
+margin-bottom:10px;
+}
