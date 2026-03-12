@@ -5,7 +5,7 @@
         <div class="col-lg-4 col-md-5 col-12 border-right-inner-forFooter">
           <div class="DFLogo">
             <a href="/">
-              <img src="images/logo.jpg" alt="" width="100" class="p-2 rounded bg-white">
+              <img src="images/sorob.png" alt="" width="100" class="p-2 rounded bg-white">
             </a>
           </div>
         </div>

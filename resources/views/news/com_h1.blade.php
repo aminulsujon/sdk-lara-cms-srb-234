@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-6 text-center">
                     <a href="{{ $websettings['cms_url'] }}">
-                        <img src="images/logo.jpg" alt="logo" class="img-fluid logo-gfx">
+                        <img src="images/sorob.png" alt="logo" class="img-fluid logo-gfx">
                         <span class="d-none">{{ $websettings['cms_sitename'] }}</span>
                     </a>
                 </div>
