@@ -36,7 +36,7 @@
                         <div class="ramadan-card">
 
                         <div class="ramadan-title">
-                        🌙 ঢাকা, বাংলাদেশ
+                        🌙 ঢাকা সেহরি ও ইফতার সময়
                         </div>
 
                         <p id="date"></p>
