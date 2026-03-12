@@ -1,4 +1,4 @@
-<div class="header-mid d-none d-md-block">
+<div class="header-mid d-none d-md-block gradient-bg">
                    <div class="container">
                         <div class="row d-flex align-items-center">
                             
@@ -8,7 +8,7 @@
                                 @if(!empty($spotlight) && count($spotlight->contents) > 0)
                                 
                                   @foreach($spotlight->contents->take(4) as $content)
-                                    <div class="col-6">
+                                    <div class="col-md-3">
                                       <div class="media">
                                         <a href="{{ $content->slug }}">
                                           @foreach ($content->upload as $item)  

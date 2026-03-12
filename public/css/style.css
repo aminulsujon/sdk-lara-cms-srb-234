@@ -2068,8 +2068,12 @@ hr {
 }
 .header-area .header-mid {
   padding: 9px 0px;
-  background: #fff;
+  background: linear-gradient(to top, #0f4c5c, #1b998b);
   position: relative;
+  color:#fff;
+}
+.header-area .header-mid a{
+  color:#fff;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   
