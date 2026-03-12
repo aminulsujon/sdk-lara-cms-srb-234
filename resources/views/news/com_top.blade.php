@@ -4,7 +4,7 @@
     <div class="container">
         <div class="trending-main">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-5">
                         <!-- Trending Top 1-->
                         <div class="trending-top">
                             <div class="trend-top-img">
@@ -29,8 +29,30 @@
                             @include('news.blocks.newsList',['content'=>$content])
                         @endforeach
                     </div>
-                    <div class="col-lg-2">
-                        <img class="img-fluid" src="images/ramadan-2026.png" alt="Ramadan Calander 2026">
+                    <div class="col-lg-3">
+                        <div id="ramadan-widget" style="max-width:400px;padding:15px;border:1px solid #ddd;border-radius:10px;font-family:sans-serif">
+                            <h3 style="text-align:center">ঢাকা সেহরি ও ইফতার সময়</h3>
+                            <p id="date"></p>
+                            <p><strong>সেহরি শেষ:</strong> <span id="sehri"></span></p>
+                            <p><strong>ইফতার:</strong> <span id="iftar"></span></p>
+                            </div>
+
+                            <script>
+                            async function loadRamadanTime(){
+                            const res = await fetch("https://api.aladhan.com/v1/timingsByCity?city=Dhaka&country=Bangladesh&method=1");
+                            const data = await res.json();
+
+                            const sehri = data.data.timings.Fajr;
+                            const iftar = data.data.timings.Maghrib;
+                            const date = data.data.date.readable;
+
+                            document.getElementById("sehri").innerText = sehri;
+                            document.getElementById("iftar").innerText = iftar;
+                            document.getElementById("date").innerText = "তারিখ: " + date;
+                            }
+
+                            loadRamadanTime();
+                            </script>
                     </div>
                 </div>
 
